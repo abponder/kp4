@@ -61,3 +61,4 @@ app.get('*', function (req, res) {
 app.listen(process.env.PORT, function () {
   console.log(_chalk2.default.blue('listening on port:', _chalk2.default.green.bold(process.env.PORT)));
 });
+console.log(process.env.DB_NAME);
