@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './components/images/logo/KP2-white.png';
 import CssModules from 'react-css-modules';
 import styles from './App.css';
-// import Load from './components/loadSomething/Load';
+import MainRouter from './MainRouter'
+import Nav from './components/nav-bar/nav.js';
+// import Login from './components/homepage/homepage';
+import {BrowserRouter} from 'react-router-dom'
+
+
 
 class App extends Component {
   render() {
@@ -10,12 +15,13 @@ class App extends Component {
       <div styleName="App">
         <header styleName="App-header">
           <img src={logo} styleName="App-logo" alt="logo" />
-          <h1 styleName="App-title">Welcome to React</h1>
+          <h1 styleName="App-title">Billing Audit System</h1>
         </header>
-        <p styleName="App-intro">
-          To get started, change <code>src/App.js</code> and save to reload!!
-        </p>
-        
+        <Nav styleName="App-nav">{  }</Nav>
+        {/* <Login> { }</Login> */}
+        <BrowserRouter>
+          <MainRouter/>
+        </BrowserRouter>
       </div>
     );
   }

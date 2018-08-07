@@ -3,26 +3,40 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+ /* animation: App-logo-spin infinite 20s linear;*/
+  height: 90px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #003c7f;
+  height: 200px;
   padding: 20px;
   color: white;
+  background-image: url(./components/images/banners/banner-grid3.png);
+  background-blend-mode: overlay;
+  background-size: contain;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #f7941d;
+  letter-spacing: 1px;
 }
 
 .App-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
+.App-nav{
+  height: 80px;
+  background-color: #dcdcdc;
+}
+
+
+
+/* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+} */
