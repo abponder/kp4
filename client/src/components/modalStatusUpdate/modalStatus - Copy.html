@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+
+<html lang="en-US">
+
+ 
+
+<head>
+
+      <title>modalTest</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="modalStatus.css">
+      <!-- <link rel="icon" type="image/gif" href="assets/images/favicon.png" /> -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+
+
+<body>
+
+<!-- Button trigger modal -->
+<Div class = "btn-div">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
+</Div>
+
+
+<!-- Modal -->
+<div>
+<div  class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Feedback Status:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box1">
+          <div id="p1">Provider Name:<span class="provider01">Elvis was Here!</span></div>
+          <div id="p2">Provider CPM_Id:<span class="provider02">( 007LMAO )</span></div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="border col font-weight-bold">
+              Overall Status:
+            </div>
+            <div class="border col font-weight-bold">
+              Due Date:
+            </div>
+          </div>
+          <div class="row">
+            <div class="border col">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  In Progress
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                  Completed
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                <label class="form-check-label" for="exampleRadios3">
+                  On hold / canceled
+                </label>
+              </div>
+            </div>
+            <div class="border col">
+              <div>
+                <label for="start">Select date:.</label>
+                <input type="date" id="start" name="trip"
+                       value="2018-07-22"
+                       min="2018-01-01" max="2018-12-31" />
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Start Assigned to section-->
+        <div class="container">
+          <div class="row">
+            <div class="border col font-weight-bold">
+              Assigned To:
+            </div>
+            <div class="border col font-weight-bold">
+              Assigned Date:
+            </div>
+          </div>
+          <div class="row">
+            <div class="border col">
+              <!-- <div class="form-check"> -->
+                <div class="input-group mb-2 mt-2 mr-2" >
+                  <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">Joe Smith</option>
+                    <option value="2">Buck O'Smith</option>
+                    <option value="3">Trees A'Crowd</option>
+                  </select>
+                </div> 
+              <!-- </div> -->
+            </div>
+            <div class="border col">
+              <div class="mt-2">
+                <label for="start"></label>
+                <input type="date" id="start" name="trip"
+                       value="2018-07-22"
+                       min="2018-01-01" max="2025-12-31" />
+            </div>
+            </div>
+          </div>
+        </div>
+        <!--End Assigned to section-->
+
+         <!--Start Completed by section-->
+         <div class="container">
+          <div class="row">
+            <div class="border col font-weight-bold">
+              Completed by:
+            </div>
+            <div class="border col font-weight-bold">
+              Completed Date:
+            </div>
+          </div>
+          <div class="row">
+            <div class="border col">
+              <!-- <div class="form-check"> -->
+                <div class="input-group mb-2 mt-2 mr-2" >
+                  <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">Joe Smith</option>
+                    <option value="2">Buck O'Smith</option>
+                    <option value="3">Trees A'Crowd</option>
+                  </select>
+                </div> 
+              <!-- </div> -->
+            </div>
+            <div class="border col">
+              <div class="mt-2">
+                <label for="start"></label>
+                <input type="date" id="start" name="trip"
+                       value="2018-07-22"
+                       min="2018-01-01" max="2025-12-31" />
+            </div>
+            </div>
+          </div>
+        </div>
+        <!--End Completed by section-->
+
+          <!--Start Comments/Notes section-->
+        <div class="container">
+          <div class="row">
+            <div class="border col font-weight-bold">
+              Comments:
+            </div>
+          </div>
+          <div class="input-group mb-0">
+            <!-- <input type="text" class="form-control" placeholder="enter comments here" aria-label="comments" aria-describedby="basic-addon2"> -->
+            <textarea id="textarea" rows="5" columns="3" placeholder="enter comments here" style="margin-top: 0px; margin-bottom: 0px; height: 118px; width: 100%;"></textarea>
+          </div>
+        </div>
+      
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary btn-sm">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

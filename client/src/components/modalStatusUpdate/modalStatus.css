@@ -1,3 +1,13 @@
+/* 
+Dark Blue:    003c7f RGB 0,60 127
+Light Blue:    2484c6 rgb 36,132,198
+orange:        f7941d rgb 247, 148, 29
+dark gray:    30383e rgb 48, 56, 62
+Light Gray:    dcdcdc RGB 220, 220, 220
+*/
+
+
+
 .loader {
   display: flex;
   justify-content: center;
@@ -10,5 +20,58 @@
 .btn-div {
   margin: 40px;
 
+}
+
+.boxShadow {
+  /* box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2); */
+}
+#modalBackColor {
+  background-color: rgb(220, 220, 220);
 
 }
+
+#p1 {
+   font-size: 15px;
+  color: rgb(54, 29, 29);
+  font-weight: 300;
+  padding:2px;
+}
+
+#p2 {
+   font-size: 15px;
+  color: rgb(54, 29, 29);
+  font-weight: 300;
+  padding:2px;
+}
+
+.box1 {
+   
+  border-style: solid;
+  border-width: 1px;
+  padding:5px;
+  margin-bottom: 10px;
+  
+}
+
+.provider01 {
+  margin-left: 35px;
+  font-size: 20px;
+  color: black;
+  font-weight: 500;
+  
+}
+.provider02 {
+  margin-left: 25px;
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+  
+}
+#inputGroupSelect01 {
+  font-size: 20px;
+
+}
+
+
+
+
