@@ -4,11 +4,19 @@ import logger from 'morgan';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import chalk from 'chalk';
+import cookieParser from 'cookie-parser';
+import passport from 'passport';
+import userRouter from './routes/user-router';
+import './auth/passport';
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// not sure if we actually need this
+app.use(cookieParser());
+
 app.use(logger('dev'));
 app.use(cors({
   allowedHeaders: 'Content-Type, authorization',
@@ -32,10 +40,47 @@ app.get('/api/hello', (req, res) => {
   res.send(JSON.stringify({ word: 'Hello world' }));
 });
 
+// for the protected route '/user' to go through the passport middleware
+// that allows only requests with valid tokens to access
+// TODO: replace the following with the code below:
+/**
+ * // in this file
+ * app.use(/protected, protectedRouter);
+ *
+ *
+ * // in /routes/protectedRouter.js
+ *
+ * import { Router } from 'express';
+ * import userRouter from './user-router';
+ * const protectedRouter = Router();
+ * router.route('/user', userRouter);
+ */
+app.use('/user', passport.authenticate('jwt', { session: false }), userRouter);
+
+
 app.use(express.static(path.join(__dirname, `/../../${staticPathOffset}client/build/`)));
 // Handle React routing, return all requests to React app
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, `/../../${staticPathOffset}client/build/`, 'index.html'));
+});
+
+// TODO: look into the following
+// catch 404 and forward to error handler
+app.use((req, res, next) => {
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+// error handler
+app.use((err, req, res, next) => {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
 });
 
 
