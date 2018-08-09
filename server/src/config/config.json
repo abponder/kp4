@@ -1,0 +1,30 @@
+{
+  "dev": {
+    "username": "root",
+    "password": "CFxrTy6^5L9>8!X26",
+    "database": "kp_audit",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql",
+    "logging": false,
+    "freezeTableName": true,
+    "operatorsAliases": false,
+    "pool": {
+            "max": 5,
+            "min": 0,
+            "idle": 10000
+          }
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  }
+}

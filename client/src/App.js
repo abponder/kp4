@@ -15,7 +15,7 @@ class App extends Component {
       <div styleName="App">
         <header styleName="App-header">
           <img src={logo} styleName="App-logo" alt="logo" />
-          <h1 styleName="App-title">Billing Audit System</h1>
+          <h1 styleName="App-title">Provider Feedback Training</h1>
         </header>
         <Nav styleName="App-nav">{  }</Nav>
         {/* <Login> { }</Login> */}

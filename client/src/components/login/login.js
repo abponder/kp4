@@ -17,21 +17,29 @@ class Login extends Component {
     alert(`Username: ${this.state.username}\nPassword: ${this.state.password}`);
     this.setState({ username: "", password: "" });
   };
+
+  //form submission
+  handleSubmit = event => {
+    
+  }
+
+
   render() {
     return (
       <div styleName="form-container">
         <div styleName="field-area">
           <img src={formlogo} styleName="form-logo" alt="logo" />
         </div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <div styleName="field-area">
             <span styleName="field-title">User Name: {this.state.username}</span>  
             <input
             type="text"
             placeholder="Username"
             name="username"
-            value={this.state.username}
-            onChange={this.handleInputChange}
+            value={this.handleInputChange}
+            // value={this.state.password}
+            // onChange={this.handleInputChange}
           />          
           </div>
           <div styleName="field-area">
@@ -40,8 +48,9 @@ class Login extends Component {
               type="password"
               placeholder="Password"
               name="password"
-              value={this.state.password}
-              onChange={this.handleInputChange}
+              value={this.handleInputChange}
+              // value={this.state.password}
+              // onChange={this.handleInputChange}
             />
           </div>
           <div styleName="div-btn">

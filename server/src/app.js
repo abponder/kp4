@@ -4,6 +4,9 @@ import logger from 'morgan';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import chalk from 'chalk';
+import sequelize from 'sequelize';
+import db from './models';
+
 
 const app = express();
 
@@ -38,7 +41,42 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, `/../../${staticPathOffset}client/build/`, 'index.html'));
 });
 
+// // db.sequelize.sync().then(function () {
+// //   console.log('sequelize is working');
+// app.listen(process.env.PORT, () => {
+//   console.log(chalk.blue('listening on port:', chalk.green.bold(process.env.PORT)));
+// });
+// // });
 
 app.listen(process.env.PORT, () => {
   console.log(chalk.blue('listening on port:', chalk.green.bold(process.env.PORT)));
 });
+
+// var cache = [];
+
+// console.log(chalk.red('db is ===>', JSON.stringify(db, function(key, value) {
+//   if (typeof value === 'object' && value !== null) {
+//       if (cache.indexOf(value) !== -1) {
+//           // Duplicate reference found
+//           try {
+//               // If this value does not reference a parent it can be deduped
+//               return JSON.parse(JSON.stringify(value));
+//           } catch (error) {
+//               // discard key if value cannot be deduped
+//               return;
+//           }
+//       }
+//       // Store value in our collection
+//       cache.push(value);
+//   }
+//   return value;
+// })));
+
+
+// cache = null;
+
+db.sequelize.sync()
+  .then(function () {
+    console.log('sequelize is working');
+  })
+  .catch(err => err && console.log(chalk.red('err while connecting to db', err)));

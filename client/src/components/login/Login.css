@@ -1,6 +1,6 @@
 .form-container {
-  width: 450px;
-  height: 350px;
+  width: 550px;
+  height: 300px;
   margin-top: 40px;
   padding: 50px;
   /* border: #30383e solid 1px; */
@@ -14,6 +14,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
+  vertical-align: middle;
 }
 
 body{
@@ -37,7 +38,7 @@ body{
   padding: 15px;
   width: 150px;
   float: right;
-  margin-right: 100px;
+  margin-right: 150px;
 }
 
 .btn1 {
